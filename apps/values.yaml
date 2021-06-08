@@ -4,3 +4,4 @@ spec:
   source:
     repoURL: https://github.com/hlilha/argocd-example-apps #repo-url
     targetRevision: HEAD
+    "akashj": "test"
