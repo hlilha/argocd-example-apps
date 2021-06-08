@@ -5,3 +5,150 @@ spec:
     repoURL: https://github.com/hlilha/argocd-example-apps #repo-url
     targetRevision: HEAD
     akashj: "test"
+global:
+  version: 1.0.0
+  repoUrl: ''
+  applications:
+    ha: false
+    apps:
+      identity:
+        enabled: true
+      insights:
+        enabled: false
+      orchestrator:
+        enabled: true
+      oms:
+        enabled: true
+      location:
+        enabled: true
+      lrm:
+        enabled: true
+      la:
+        enabled: true
+      portal:
+        enabled: true
+      ba:
+        enabled: false
+      testmanager:
+        enabled: true
+      webhook:
+        enabled: true
+      sfcore:
+        enabled: true
+      automationhub:
+        enabled: true
+      automationops:
+        enabled: true
+      actioncenter:
+        enabled: true
+      aicenter:
+        enabled: false
+      du:
+        enabled: false
+      automationstore:
+        enabled: true
+      processes:
+        enabled: true
+      actions:
+        enabled: true
+      taskmining:
+        enabled: true  
+
+  storageClass: ""
+  userInputs:
+    hostname: FQDN_OF_KUBERNETES_INSTANCE
+
+    certificate:
+      host:
+        ca: CERT_CA_PLACEHOLDER
+        tls: CERT_TLS_PLACEHOLDER
+        key: CERT_KEY_PLACEHOLDER
+      identity:
+        token:
+          signingCertificate: TOKEN_SIGING_CERT_PLACEHOLDER
+          signingCertificatePassword: TOKEN_SIGING_CERT_PASSWORD_PLACEHOLDER
+        saml:
+          currentSigningCert: Q0VSVElGSUNBVEVfUExBQ0VIT0xERVI=
+          currentSigningCertPassword: IDENTITY_SAML_CURRENT_SIGNING_CERT_PASSWORD_PLACEHOLDER
+          futureSigningCert: Q0VSVElGSUNBVEVfUExBQ0VIT0xERVI=
+          futureSigningCertPassword: IDENTITY_SAML_FUTURE_SIGNING_CERT_PASSWORD_PLACEHOLDER
+
+    telemetry:
+      optOut: "false"
+
+    orchestrator:
+      path: /orchestrator_
+      sqlConnectionString: SQL_CONNECTION_STRING_PLACEHOLDER
+      sqlConnectionStringTA: SQL_CONNECTION_STRING_PLACEHOLDER
+
+    identity:
+      path: /identity_
+      sqlConnectionString: SQL_CONNECTION_STRING_PLACEHOLDER
+      krb5KeytabSecret: S1JCNV9LRVlUQUJfU0VDUkVUX1BMQUNFSE9MREVS
+      hostAdminUsername: USERNAME_PLACEHOLDER
+      hostAdminPassword: PASSWORD_PLACEHOLDER
+    
+    insights:
+      path: /insights_
+    
+    oms:
+      path: /organization
+      tmsPath: /tms
+      sqlConnectionString: SQL_CONNECTION_STRING_PLACEHOLDER
+
+    location:
+      path: /location
+      sqlConnectionString: SQL_CONNECTION_STRING_PLACEHOLDER
+    
+    lrm:
+      path: /lrm
+      sqlConnectionString: SQL_CONNECTION_STRING_PLACEHOLDER
+
+    la:
+      path: /la
+      sqlConnectionString: SQL_CONNECTION_STRING_PLACEHOLDER
+
+    automationhub:
+      path: /automationhub_
+      sqlConnectionString: SQL_CONNECTION_STRING_PLACEHOLDER
+
+    portal:
+      path: /
+
+    ba:
+      path: /apps_
+      mongoConnectionString: "mongodb+srv://username:UiPath*123@onpremise-dev.kaao8.mongodb.net/test"  
+
+    testmanager:
+      path: /testmanager_
+      sqlConnectionString: SQL_CONNECTION_STRING_PLACEHOLDER
+    
+    automationops:
+      path: /roboticsops_
+      sqlConnectionString: SQL_CONNECTION_STRING_PLACEHOLDER
+      
+    webhook:
+      path: /webhook_
+
+    actioncenter:
+      path: /actions_
+
+    aicenter:
+      path: /aifabric_
+      sql:
+        username: SQL_USERNAME_PLACEHOLDER
+        password: SQL_PASSWORD_PLACEHOLDER
+        aiHelperDatabaseName: SQL_DATABASE_PLACEHOLDER
+        aiPkgmanagerDatabaseName: SQL_DATABASE_PLACEHOLDER
+        aiDeployerDatabaseName: SQL_DATABASE_PLACEHOLDER
+        aiTrainerDatabaseName: SQL_DATABASE_PLACEHOLDER
+        host: DATABASE_IP
+      
+    du:
+      path: /du_
+      sqlConnectionString: SQL_CONNECTION_STRING_PLACEHOLDER
+      
+    taskmining:
+      path: /taskmining_
+      sqlConnectionString: SQL_CONNECTION_STRING_PLACEHOLDER  
+
