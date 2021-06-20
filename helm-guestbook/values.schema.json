@@ -265,7 +265,11 @@
                                     "type": "string"
                                 },
                                 "sqlConnectionString": {
-                                    "type": "string"
+                                    "type": "string",
+                                    "title": "Automation hub sql connection string",
+                                    "options": {
+                                        "infoText": "Please enter sql connection string in format `Data Source=;Initial Catlog=;Username=;password=;`"
+                                    }
                                 }
                             }
                         },
