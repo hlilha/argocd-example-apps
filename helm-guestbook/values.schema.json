@@ -26,7 +26,8 @@
                                     "properties": {
                                         "enabled": {
                                             "type": "boolean",
-                                            "default": false
+                                            "default": false,
+                                            "format": "checkbox"
                                         }
                                     }
                                 },
