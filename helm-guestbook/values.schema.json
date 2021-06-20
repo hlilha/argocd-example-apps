@@ -226,16 +226,20 @@
                                     "type": "object",
                                     "properties": {
                                         "aiDeployerDatabaseName": {
-                                            "type": "string"
+                                            "type": "string",
+                                            "title": "AiCenter Deployer Database Name"
                                         },
                                         "aiHelperDatabaseName": {
-                                            "type": "string"
+                                            "type": "string",
+                                            "title": "AiCenter Helper Database Name"
                                         },
                                         "aiPkgmanagerDatabaseName": {
-                                            "type": "string"
+                                            "type": "string",
+                                            "title": "AiCenter PackageManager Database Name"
                                         },
                                         "aiTrainerDatabaseName": {
-                                            "type": "string"
+                                            "type": "string",
+                                            "title": "AiCenter Trainer Database Name"
                                         },
                                         "host": {
                                             "type": "string"
