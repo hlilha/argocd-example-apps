@@ -36,7 +36,8 @@
                                     "properties": {
                                         "enabled": {
                                             "type": "boolean",
-                                            "default": true
+                                            "default": true,
+                                            "enum": [true, false]
                                         }
                                     }
                                 },
@@ -44,7 +45,8 @@
                                     "type": "object",
                                     "properties": {
                                         "enabled": {
-                                            "type": "boolean"
+                                            "type": "string",
+                                            "enum": [true, false]
                                         }
                                     }
                                 },
