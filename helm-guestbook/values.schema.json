@@ -46,7 +46,7 @@
                                     "properties": {
                                         "enabled": {
                                             "type": "string",
-                                            "enum": [true, false]
+                                            "enum": ["true", "false"]
                                         }
                                     }
                                 },
