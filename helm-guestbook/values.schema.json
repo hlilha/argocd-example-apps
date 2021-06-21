@@ -1,7 +1,6 @@
 {
     "$schema": "http://json-schema.org/schema#",
     "type": "object",
-    "title": "global",
     "properties": {
         "global": {
             "type": "object",
