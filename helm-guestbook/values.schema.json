@@ -114,14 +114,6 @@
         "userInputs": {
             "type": "object",
             "properties": {
-                "actioncenter": {
-                    "type": "object",
-                    "properties": {
-                        "path": {
-                            "type": "string"
-                        }
-                    }
-                },
                 "aicenter": {
                     "type": "object",
                     "title": "AiCenter",
@@ -166,26 +158,12 @@
                 "automationhub": {
                     "type": "object",
                     "properties": {
-                        "path": {
-                            "type": "string"
-                        },
                         "sqlConnectionString": {
                             "type": "string",
-                            "title": "Automation hub sql connection string",
+                            "title": "Sql connection string",
                             "options": {
                                 "infoText": "Please enter sql connection string in format `Data Source=;Initial Catlog=;Username=;password=;`"
                             }
-                        }
-                    }
-                },
-                "automationops": {
-                    "type": "object",
-                    "properties": {
-                        "path": {
-                            "type": "string"
-                        },
-                        "sqlConnectionString": {
-                            "type": "string"
                         }
                     }
                 },
@@ -229,21 +207,29 @@
                 },
                 "identity": {
                     "type": "object",
+                    "title": "Identity",
                     "properties": {
                         "hostAdminPassword": {
-                            "type": "string"
+                            "type": "string",
+                            "title": "Host Partition Password",
+                            "format": "password"
                         },
                         "hostAdminUsername": {
-                            "type": "string"
+                            "type": "string",
+                            "title": "Host Partition Username"
                         },
                         "krb5KeytabSecret": {
-                            "type": "string"
-                        },
-                        "path": {
-                            "type": "string"
+                            "type": "string",
+                            "title": "Krb5 KeyTab Secret",
+                            "format": "password"
                         },
                         "sqlConnectionString": {
-                            "type": "string"
+                            "type": "string",
+                            "title": "Sql Connection String",
+                            "format": "password",
+                            "options": {
+                                "infoText": "Please enter sql connection string in format `Data Source=;Initial Catlog=;Username=;password=;`"
+                            }
                         }
                     }
                 },
