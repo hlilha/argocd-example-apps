@@ -192,33 +192,37 @@
                 "certificate": {
                     "type": "object",
                     "properties": {
-                        "host": {
-                            "type": "object",
-                            "properties": {
-                                "ca": {
-                                    "type": "string",
-                                    "title": "CA Certificate",
-                                    "media": {
-                                        "binaryEncoding": "base64",
-                                        "type": "application/x-x509-ca-cert"
-                                    }
-                                },
-                                "key": {
-                                    "type": "string",
-                                    "title": "Server Certificate Key",
-                                    "media": {
-                                        "binaryEncoding": "base64",
-                                        "type": "application/x-x509-ca-cert"
-                                    }
-                                },
-                                "tls": {
-                                    "type": "string",
-                                    "title": "Server Certificate",
-                                    "media": {
-                                        "binaryEncoding": "base64",
-                                        "type": "application/x-x509-ca-cert"
-                                    }
-                                }
+                        "ca": {
+                            "type": "string",
+                            "title": "CA Certificate",
+                            "options": {
+                                "infoText": "Root Certificate Authority used to sign server certificate"
+                            },
+                            "media": {
+                                "binaryEncoding": "base64",
+                                "type": "application/x-x509-ca-cert"
+                            }
+                        },
+                        "key": {
+                            "type": "string",
+                            "title": "Server Certificate Key",
+                            "options": {
+                                "infoText": "Server certificate private key"
+                            },
+                            "media": {
+                                "binaryEncoding": "base64",
+                                "type": "application/x-x509-ca-cert"
+                            }
+                        },
+                        "tls": {
+                            "type": "string",
+                            "title": "Server Certificate",
+                            "options": {
+                                "infoText": "Server certificate"
+                            },
+                            "media": {
+                                "binaryEncoding": "base64",
+                                "type": "application/x-x509-ca-cert"
                             }
                         }
                     }
@@ -243,14 +247,6 @@
                         }
                     }
                 },
-                "insights": {
-                    "type": "object",
-                    "properties": {
-                        "path": {
-                            "type": "string"
-                        }
-                    }
-                },
                 "orchestrator": {
                     "type": "object",
                     "properties": {
@@ -266,11 +262,13 @@
                     }
                 },
                 "telemetry": {
-                    "type": "object",
-                    "properties": {
-                        "optOut": {
-                            "type": "string"
-                        }
+                    "type": "string",
+                    "format": "radio",
+                    "enum": ["OptIn", "OptOut"],
+                    "default": "OptIn",
+                    "title": "Telemetry",
+                    "options": {
+                        "infoText": "It is to help analyze product usage to better improve the products."
                     }
                 },
                 "testmanager": {
