@@ -110,7 +110,7 @@
                             }
                         },
                         "ha": {
-                            "type": "boolean",
+                            "type": "string",
                             "format": "radio",
                             "enum": ["Yes", "No"]
                         }
