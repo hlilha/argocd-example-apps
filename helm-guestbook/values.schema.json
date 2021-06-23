@@ -141,29 +141,32 @@
                                     "properties": {
                                         "aiDeployerDatabaseName": {
                                             "type": "string",
-                                            "title": "AiCenter Deployer Database Name"
+                                            "title": "Deployer Database Name"
                                         },
                                         "aiHelperDatabaseName": {
                                             "type": "string",
-                                            "title": "AiCenter Helper Database Name"
+                                            "title": "Helper Database Name"
                                         },
                                         "aiPkgmanagerDatabaseName": {
                                             "type": "string",
-                                            "title": "AiCenter PackageManager Database Name"
+                                            "title": "PackageManager Database Name"
                                         },
                                         "aiTrainerDatabaseName": {
                                             "type": "string",
-                                            "title": "AiCenter Trainer Database Name"
+                                            "title": "Trainer Database Name"
                                         },
                                         "host": {
-                                            "type": "string"
+                                            "type": "string",
+                                            "title": "SQL Server Host"
                                         },
                                         "password": {
                                             "type": "string",
+                                            "title": "SQL Password",
                                             "format": "password"
                                         },
                                         "username": {
-                                            "type": "string"
+                                            "type": "string",
+                                            "title": "SQL Username"
                                         }
                                     }
                                 }
