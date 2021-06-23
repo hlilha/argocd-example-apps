@@ -14,98 +14,101 @@
                                 "actioncenter": {
                                     "type": "boolean",
                                     "default": false,
-                                    "format": "checkbox"
-
+                                    "format": "checkbox",
+                                    "title": "Action Center",
+                                    "options": {
+                                        "infoText": "Enable Action Center"
+                                    }
                                 },
                                 "aicenter": {
                                     "type": "boolean",
                                     "default": false,
-                                    "format": "checkbox"
+                                    "format": "checkbox",
+                                    "title": "AiCenter",
+                                    "options": {
+                                        "infoText": "Enable AiCenter"
+                                    }
                                 },
                                 "automationhub": {
                                     "type": "boolean",
                                     "default": false,
-                                    "format": "checkbox"
+                                    "format": "checkbox",
+                                    "title": "Automation Hub",
+                                    "options": {
+                                        "infoText": "Enable AutomationHub"
+                                    }
                                 },
                                 "automationops": {
                                     "type": "boolean",
                                     "default": false,
-                                    "format": "checkbox"
+                                    "format": "checkbox",
+                                    "title": "Automation Ops",
+                                    "options": {
+                                        "infoText": "Enable AutomationOps"
+                                    }
                                 },
                                 "ba": {
                                     "type": "boolean",
                                     "default": false,
-                                    "format": "checkbox"
+                                    "format": "checkbox",
+                                    "title": "Business Apps",
+                                    "options": {
+                                        "infoText": "Enable Business Apps"
+                                    }
                                 },
                                 "du": {
                                     "type": "boolean",
                                     "default": false,
-                                    "format": "checkbox"
+                                    "format": "checkbox",
+                                    "title": "Document Understanding",
+                                    "options": {
+                                        "infoText": "Enable Documentation Understanding"
+                                    }
                                 },
                                 "identity": {
                                     "type": "boolean",
-                                    "default": false,
-                                    "format": "checkbox"
+                                    "default": true,
+                                    "format": "checkbox",
+                                    "title": "Identity Service",
+                                    "options": {
+                                        "infoText": "Enable Identity Service"
+                                    }
                                 },
                                 "insights": {
                                     "type": "boolean",
                                     "default": false,
-                                    "format": "checkbox"
-                                },
-                                "la": {
-                                    "type": "boolean",
-                                    "default": false,
-                                    "format": "checkbox"
-                                },
-                                "location": {
-                                    "type": "boolean",
-                                    "default": false,
-                                    "format": "checkbox"
-                                },
-                                "lrm": {
-                                    "type": "boolean",
-                                    "default": false,
-                                    "format": "checkbox"
-                                },
-                                "oms": {
-                                    "type": "boolean",
-                                    "default": false,
-                                    "format": "checkbox"
+                                    "format": "checkbox",
+                                    "title": "Insights",
+                                    "options": {
+                                        "infoText": "Enable Insights"
+                                    }
                                 },
                                 "orchestrator": {
                                     "type": "boolean",
-                                    "default": false,
-                                    "format": "checkbox"
-                                },
-                                "portal": {
-                                    "type": "boolean",
-                                    "default": false,
-                                    "format": "checkbox"
-                                },
-                                "processes": {
-                                    "type": "boolean",
-                                    "default": false,
-                                    "format": "checkbox"
-                                },
-                                "sfcore": {
-                                    "type": "boolean",
-                                    "default": false,
-                                    "format": "checkbox"
+                                    "default": true,
+                                    "format": "checkbox",
+                                    "title": "Orchestrator",
+                                    "options": {
+                                        "infoText": "Enable Orchestrator"
+                                    }
                                 },
                                 "taskmining": {
                                     "type": "boolean",
                                     "default": false,
-                                    "format": "checkbox"
+                                    "format": "checkbox",
+                                    "title": "Task Mining",
+                                    "options": {
+                                        "infoText": "Enable TaskMining"
+                                    }
                                 },
                                 "testmanager": {
                                     "type": "boolean",
                                     "default": false,
-                                    "format": "checkbox"
-                                },
-                                "webhook": {
-                                    "type": "boolean",
-                                    "default": false,
-                                    "format": "checkbox"
+                                    "format": "checkbox",
+                                    "title": "Test Manager",
+                                    "options": {
+                                        "infoText": "Enable Test Manager"
+                                    }
                                 }
                             }
                         },
