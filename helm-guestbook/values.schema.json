@@ -13,7 +13,9 @@
                             "properties": {
                                 "actioncenter": {
                                     "type": "boolean",
-                                    "default": false
+                                    "default": false,
+                                    "format": "checkbox"
+
                                 },
                                 "actions": {
                                     "type": "object",
