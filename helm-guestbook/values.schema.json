@@ -119,15 +119,6 @@
                         }
                     }
                 },
-                "registryUrl": {
-                    "type": "string"
-                },
-                "repoURL": {
-                    "type": "string"
-                },
-                "storageClass": {
-                    "type": "string"
-                },
                 "userInputs": {
                     "type": "object",
                     "properties": {
@@ -204,17 +195,6 @@
                                 }
                             }
                         },
-                        "ba": {
-                            "type": "object",
-                            "properties": {
-                                "mongoConnectionString": {
-                                    "type": "string"
-                                },
-                                "path": {
-                                    "type": "string"
-                                }
-                            }
-                        },
                         "certificate": {
                             "type": "object",
                             "properties": {
@@ -231,7 +211,7 @@
                                         },
                                         "key": {
                                             "type": "string",
-                                            "tile": "Server Certificate",
+                                            "title": "Server Certificate Key",
                                             "media": {
                                                 "binaryEncoding": "base64",
                                                 "type": "application/x-x509-ca-cert"
@@ -239,59 +219,15 @@
                                         },
                                         "tls": {
                                             "type": "string",
-                                            "title": "Server Certificate Key",
+                                            "title": "Server Certificate",
                                             "media": {
                                                 "binaryEncoding": "base64",
                                                 "type": "application/x-x509-ca-cert"
                                             }
                                         }
                                     }
-                                },
-                                "identity": {
-                                    "type": "object",
-                                    "properties": {
-                                        "saml": {
-                                            "type": "object",
-                                            "properties": {
-                                                "currentSigningCert": {
-                                                    "type": "string"
-                                                },
-                                                "currentSigningCertPassword": {
-                                                    "type": "string"
-                                                },
-                                                "futureSigningCert": {
-                                                    "type": "string"
-                                                },
-                                                "futureSigningCertPassword": {
-                                                    "type": "string"
-                                                }
-                                            }
-                                        },
-                                        "token": {
-                                            "type": "object",
-                                            "properties": {
-                                                "signingCertificate": {
-                                                    "type": "string"
-                                                },
-                                                "signingCertificatePassword": {
-                                                    "type": "string"
-                                                }
-                                            }
-                                        }
-                                    }
                                 }
                             }
-                        },
-                        "du": {
-                            "type": "object",
-                            "properties": {
-                                "path": {
-                                    "type": "string"
-                                }
-                            }
-                        },
-                        "hostname": {
-                            "type": "string"
                         },
                         "identity": {
                             "type": "object",
@@ -321,53 +257,6 @@
                                 }
                             }
                         },
-                        "la": {
-                            "type": "object",
-                            "properties": {
-                                "path": {
-                                    "type": "string"
-                                },
-                                "sqlConnectionString": {
-                                    "type": "string"
-                                }
-                            }
-                        },
-                        "location": {
-                            "type": "object",
-                            "properties": {
-                                "path": {
-                                    "type": "string"
-                                },
-                                "sqlConnectionString": {
-                                    "type": "string"
-                                }
-                            }
-                        },
-                        "lrm": {
-                            "type": "object",
-                            "properties": {
-                                "path": {
-                                    "type": "string"
-                                },
-                                "sqlConnectionString": {
-                                    "type": "string"
-                                }
-                            }
-                        },
-                        "oms": {
-                            "type": "object",
-                            "properties": {
-                                "path": {
-                                    "type": "string"
-                                },
-                                "sqlConnectionString": {
-                                    "type": "string"
-                                },
-                                "tmsPath": {
-                                    "type": "string"
-                                }
-                            }
-                        },
                         "orchestrator": {
                             "type": "object",
                             "properties": {
@@ -378,25 +267,6 @@
                                     "type": "string"
                                 },
                                 "sqlConnectionStringTA": {
-                                    "type": "string"
-                                }
-                            }
-                        },
-                        "portal": {
-                            "type": "object",
-                            "properties": {
-                                "path": {
-                                    "type": "string"
-                                }
-                            }
-                        },
-                        "taskmining": {
-                            "type": "object",
-                            "properties": {
-                                "path": {
-                                    "type": "string"
-                                },
-                                "sqlConnectionString": {
                                     "type": "string"
                                 }
                             }
@@ -416,14 +286,6 @@
                                     "type": "string"
                                 },
                                 "sqlConnectionString": {
-                                    "type": "string"
-                                }
-                            }
-                        },
-                        "webhook": {
-                            "type": "object",
-                            "properties": {
-                                "path": {
                                     "type": "string"
                                 }
                             }
