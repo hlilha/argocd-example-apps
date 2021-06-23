@@ -2,303 +2,292 @@
     "$schema": "http://json-schema.org/schema#",
     "type": "object",
     "properties": {
-        "global": {
+        "apps": {
             "type": "object",
             "properties": {
-                "applications": {
-                    "type": "object",
-                    "properties": {
-                        "apps": {
-                            "type": "object",
-                            "properties": {
-                                "actioncenter": {
-                                    "type": "boolean",
-                                    "default": false,
-                                    "format": "checkbox",
-                                    "title": "Action Center",
-                                    "options": {
-                                        "infoText": "Enable Action Center"
-                                    }
-                                },
-                                "aicenter": {
-                                    "type": "boolean",
-                                    "default": false,
-                                    "format": "checkbox",
-                                    "title": "AiCenter",
-                                    "options": {
-                                        "infoText": "Enable AiCenter"
-                                    }
-                                },
-                                "automationhub": {
-                                    "type": "boolean",
-                                    "default": false,
-                                    "format": "checkbox",
-                                    "title": "Automation Hub",
-                                    "options": {
-                                        "infoText": "Enable AutomationHub"
-                                    }
-                                },
-                                "automationops": {
-                                    "type": "boolean",
-                                    "default": false,
-                                    "format": "checkbox",
-                                    "title": "Automation Ops",
-                                    "options": {
-                                        "infoText": "Enable AutomationOps"
-                                    }
-                                },
-                                "ba": {
-                                    "type": "boolean",
-                                    "default": false,
-                                    "format": "checkbox",
-                                    "title": "Business Apps",
-                                    "options": {
-                                        "infoText": "Enable Business Apps"
-                                    }
-                                },
-                                "du": {
-                                    "type": "boolean",
-                                    "default": false,
-                                    "format": "checkbox",
-                                    "title": "Document Understanding",
-                                    "options": {
-                                        "infoText": "Enable Documentation Understanding"
-                                    }
-                                },
-                                "identity": {
-                                    "type": "boolean",
-                                    "default": true,
-                                    "format": "checkbox",
-                                    "title": "Identity Service",
-                                    "options": {
-                                        "infoText": "Enable Identity Service"
-                                    }
-                                },
-                                "insights": {
-                                    "type": "boolean",
-                                    "default": false,
-                                    "format": "checkbox",
-                                    "title": "Insights",
-                                    "options": {
-                                        "infoText": "Enable Insights"
-                                    }
-                                },
-                                "orchestrator": {
-                                    "type": "boolean",
-                                    "default": true,
-                                    "format": "checkbox",
-                                    "title": "Orchestrator",
-                                    "options": {
-                                        "infoText": "Enable Orchestrator"
-                                    }
-                                },
-                                "taskmining": {
-                                    "type": "boolean",
-                                    "default": false,
-                                    "format": "checkbox",
-                                    "title": "Task Mining",
-                                    "options": {
-                                        "infoText": "Enable TaskMining"
-                                    }
-                                },
-                                "testmanager": {
-                                    "type": "boolean",
-                                    "default": false,
-                                    "format": "checkbox",
-                                    "title": "Test Manager",
-                                    "options": {
-                                        "infoText": "Enable Test Manager"
-                                    }
-                                }
-                            }
-                        },
-                        "ha": {
-                            "type": "string",
-                            "format": "radio",
-                            "enum": ["Yes", "No"]
-                        }
+                "actioncenter": {
+                    "type": "boolean",
+                    "default": false,
+                    "format": "checkbox",
+                    "title": "Action Center",
+                    "options": {
+                        "infoText": "Enable Action Center"
                     }
                 },
-                "userInputs": {
-                    "type": "object",
-                    "properties": {
-                        "actioncenter": {
-                            "type": "object",
-                            "properties": {
-                                "path": {
-                                    "type": "string"
-                                }
-                            }
-                        },
-                        "aicenter": {
-                            "type": "object",
-                            "properties": {
-                                "path": {
-                                    "type": "string"
-                                },
-                                "sql": {
-                                    "type": "object",
-                                    "properties": {
-                                        "aiDeployerDatabaseName": {
-                                            "type": "string",
-                                            "title": "Deployer Database Name"
-                                        },
-                                        "aiHelperDatabaseName": {
-                                            "type": "string",
-                                            "title": "Helper Database Name"
-                                        },
-                                        "aiPkgmanagerDatabaseName": {
-                                            "type": "string",
-                                            "title": "PackageManager Database Name"
-                                        },
-                                        "aiTrainerDatabaseName": {
-                                            "type": "string",
-                                            "title": "Trainer Database Name"
-                                        },
-                                        "host": {
-                                            "type": "string",
-                                            "title": "SQL Server Host"
-                                        },
-                                        "password": {
-                                            "type": "string",
-                                            "title": "SQL Password",
-                                            "format": "password"
-                                        },
-                                        "username": {
-                                            "type": "string",
-                                            "title": "SQL Username"
-                                        }
-                                    }
-                                }
-                            }
-                        },
-                        "automationhub": {
-                            "type": "object",
-                            "properties": {
-                                "path": {
-                                    "type": "string"
-                                },
-                                "sqlConnectionString": {
-                                    "type": "string",
-                                    "title": "Automation hub sql connection string",
-                                    "options": {
-                                        "infoText": "Please enter sql connection string in format `Data Source=;Initial Catlog=;Username=;password=;`"
-                                    }
-                                }
-                            }
-                        },
-                        "automationops": {
-                            "type": "object",
-                            "properties": {
-                                "path": {
-                                    "type": "string"
-                                },
-                                "sqlConnectionString": {
-                                    "type": "string"
-                                }
-                            }
-                        },
-                        "certificate": {
-                            "type": "object",
-                            "properties": {
-                                "host": {
-                                    "type": "object",
-                                    "properties": {
-                                        "ca": {
-                                            "type": "string",
-                                            "title": "CA Certificate",
-                                            "media": {
-                                                "binaryEncoding": "base64",
-                                                "type": "application/x-x509-ca-cert"
-                                            }
-                                        },
-                                        "key": {
-                                            "type": "string",
-                                            "title": "Server Certificate Key",
-                                            "media": {
-                                                "binaryEncoding": "base64",
-                                                "type": "application/x-x509-ca-cert"
-                                            }
-                                        },
-                                        "tls": {
-                                            "type": "string",
-                                            "title": "Server Certificate",
-                                            "media": {
-                                                "binaryEncoding": "base64",
-                                                "type": "application/x-x509-ca-cert"
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        },
-                        "identity": {
-                            "type": "object",
-                            "properties": {
-                                "hostAdminPassword": {
-                                    "type": "string"
-                                },
-                                "hostAdminUsername": {
-                                    "type": "string"
-                                },
-                                "krb5KeytabSecret": {
-                                    "type": "string"
-                                },
-                                "path": {
-                                    "type": "string"
-                                },
-                                "sqlConnectionString": {
-                                    "type": "string"
-                                }
-                            }
-                        },
-                        "insights": {
-                            "type": "object",
-                            "properties": {
-                                "path": {
-                                    "type": "string"
-                                }
-                            }
-                        },
-                        "orchestrator": {
-                            "type": "object",
-                            "properties": {
-                                "path": {
-                                    "type": "string"
-                                },
-                                "sqlConnectionString": {
-                                    "type": "string"
-                                },
-                                "sqlConnectionStringTA": {
-                                    "type": "string"
-                                }
-                            }
-                        },
-                        "telemetry": {
-                            "type": "object",
-                            "properties": {
-                                "optOut": {
-                                    "type": "string"
-                                }
-                            }
-                        },
-                        "testmanager": {
-                            "type": "object",
-                            "properties": {
-                                "path": {
-                                    "type": "string"
-                                },
-                                "sqlConnectionString": {
-                                    "type": "string"
-                                }
-                            }
-                        }
+                "aicenter": {
+                    "type": "boolean",
+                    "default": false,
+                    "format": "checkbox",
+                    "title": "AiCenter",
+                    "options": {
+                        "infoText": "Enable AiCenter"
                     }
                 },
-                "version": {
-                    "type": "string"
+                "automationhub": {
+                    "type": "boolean",
+                    "default": false,
+                    "format": "checkbox",
+                    "title": "Automation Hub",
+                    "options": {
+                        "infoText": "Enable AutomationHub"
+                    }
+                },
+                "automationops": {
+                    "type": "boolean",
+                    "default": false,
+                    "format": "checkbox",
+                    "title": "Automation Ops",
+                    "options": {
+                        "infoText": "Enable AutomationOps"
+                    }
+                },
+                "ba": {
+                    "type": "boolean",
+                    "default": false,
+                    "format": "checkbox",
+                    "title": "Business Apps",
+                    "options": {
+                        "infoText": "Enable Business Apps"
+                    }
+                },
+                "du": {
+                    "type": "boolean",
+                    "default": false,
+                    "format": "checkbox",
+                    "title": "Document Understanding",
+                    "options": {
+                        "infoText": "Enable Documentation Understanding"
+                    }
+                },
+                "identity": {
+                    "type": "boolean",
+                    "default": true,
+                    "format": "checkbox",
+                    "title": "Identity Service",
+                    "options": {
+                        "infoText": "Enable Identity Service"
+                    }
+                },
+                "insights": {
+                    "type": "boolean",
+                    "default": false,
+                    "format": "checkbox",
+                    "title": "Insights",
+                    "options": {
+                        "infoText": "Enable Insights"
+                    }
+                },
+                "orchestrator": {
+                    "type": "boolean",
+                    "default": true,
+                    "format": "checkbox",
+                    "title": "Orchestrator",
+                    "options": {
+                        "infoText": "Enable Orchestrator"
+                    }
+                },
+                "taskmining": {
+                    "type": "boolean",
+                    "default": false,
+                    "format": "checkbox",
+                    "title": "Task Mining",
+                    "options": {
+                        "infoText": "Enable TaskMining"
+                    }
+                },
+                "testmanager": {
+                    "type": "boolean",
+                    "default": false,
+                    "format": "checkbox",
+                    "title": "Test Manager",
+                    "options": {
+                        "infoText": "Enable Test Manager"
+                    }
                 }
             }
+        },
+        "ha": {
+            "type": "string",
+            "format": "radio",
+            "enum": ["Yes", "No"]
+        },                   
+        "userInputs": {
+            "type": "object",
+            "properties": {
+                "actioncenter": {
+                    "type": "object",
+                    "properties": {
+                        "path": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "aicenter": {
+                    "type": "object",
+                    "title": "AiCenter",
+                    "properties": {
+                        "sql": {
+                            "type": "object",
+                            "title": "SQL Information",
+                            "properties": {
+                                "aiDeployerDatabaseName": {
+                                    "type": "string",
+                                    "title": "Deployer Database Name"
+                                },
+                                "aiHelperDatabaseName": {
+                                    "type": "string",
+                                    "title": "Helper Database Name"
+                                },
+                                "aiPkgmanagerDatabaseName": {
+                                    "type": "string",
+                                    "title": "PackageManager Database Name"
+                                },
+                                "aiTrainerDatabaseName": {
+                                    "type": "string",
+                                    "title": "Trainer Database Name"
+                                },
+                                "host": {
+                                    "type": "string",
+                                    "title": "SQL Server Host"
+                                },
+                                "password": {
+                                    "type": "string",
+                                    "title": "SQL Password",
+                                    "format": "password"
+                                },
+                                "username": {
+                                    "type": "string",
+                                    "title": "SQL Username"
+                                }
+                            }
+                        }
+                    }
+                },
+                "automationhub": {
+                    "type": "object",
+                    "properties": {
+                        "path": {
+                            "type": "string"
+                        },
+                        "sqlConnectionString": {
+                            "type": "string",
+                            "title": "Automation hub sql connection string",
+                            "options": {
+                                "infoText": "Please enter sql connection string in format `Data Source=;Initial Catlog=;Username=;password=;`"
+                            }
+                        }
+                    }
+                },
+                "automationops": {
+                    "type": "object",
+                    "properties": {
+                        "path": {
+                            "type": "string"
+                        },
+                        "sqlConnectionString": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "certificate": {
+                    "type": "object",
+                    "properties": {
+                        "host": {
+                            "type": "object",
+                            "properties": {
+                                "ca": {
+                                    "type": "string",
+                                    "title": "CA Certificate",
+                                    "media": {
+                                        "binaryEncoding": "base64",
+                                        "type": "application/x-x509-ca-cert"
+                                    }
+                                },
+                                "key": {
+                                    "type": "string",
+                                    "title": "Server Certificate Key",
+                                    "media": {
+                                        "binaryEncoding": "base64",
+                                        "type": "application/x-x509-ca-cert"
+                                    }
+                                },
+                                "tls": {
+                                    "type": "string",
+                                    "title": "Server Certificate",
+                                    "media": {
+                                        "binaryEncoding": "base64",
+                                        "type": "application/x-x509-ca-cert"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "identity": {
+                    "type": "object",
+                    "properties": {
+                        "hostAdminPassword": {
+                            "type": "string"
+                        },
+                        "hostAdminUsername": {
+                            "type": "string"
+                        },
+                        "krb5KeytabSecret": {
+                            "type": "string"
+                        },
+                        "path": {
+                            "type": "string"
+                        },
+                        "sqlConnectionString": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "insights": {
+                    "type": "object",
+                    "properties": {
+                        "path": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "orchestrator": {
+                    "type": "object",
+                    "properties": {
+                        "path": {
+                            "type": "string"
+                        },
+                        "sqlConnectionString": {
+                            "type": "string"
+                        },
+                        "sqlConnectionStringTA": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "telemetry": {
+                    "type": "object",
+                    "properties": {
+                        "optOut": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "testmanager": {
+                    "type": "object",
+                    "properties": {
+                        "path": {
+                            "type": "string"
+                        },
+                        "sqlConnectionString": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "version": {
+            "type": "string"
         }
     }
 }
