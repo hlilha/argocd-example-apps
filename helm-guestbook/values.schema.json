@@ -17,182 +17,103 @@
                                     "format": "checkbox"
 
                                 },
-                                "actions": {
-                                    "type": "object",
-                                    "properties": {
-                                        "enabled": {
-                                            "type": "boolean",
-                                            "default": false,
-                                            "format": "checkbox"
-                                        }
-                                    }
-                                },
                                 "aicenter": {
-                                    "type": "object",
-                                    "properties": {
-                                        "enabled": {
-                                            "type": "boolean",
-                                            "default": true,
-                                            "enum": [true, false]
-                                        }
-                                    }
+                                    "type": "boolean",
+                                    "default": false,
+                                    "format": "checkbox"
                                 },
                                 "automationhub": {
-                                    "type": "object",
-                                    "properties": {
-                                        "enabled": {
-                                            "type": "string",
-                                            "enum": ["true", "false"]
-                                        }
-                                    }
+                                    "type": "boolean",
+                                    "default": false,
+                                    "format": "checkbox"
                                 },
                                 "automationops": {
-                                    "type": "object",
-                                    "properties": {
-                                        "enabled": {
-                                            "type": "boolean"
-                                        }
-                                    }
-                                },
-                                "automationstore": {
-                                    "type": "object",
-                                    "properties": {
-                                        "enabled": {
-                                            "type": "boolean"
-                                        }
-                                    }
+                                    "type": "boolean",
+                                    "default": false,
+                                    "format": "checkbox"
                                 },
                                 "ba": {
-                                    "type": "object",
-                                    "properties": {
-                                        "enabled": {
-                                            "type": "boolean"
-                                        }
-                                    }
+                                    "type": "boolean",
+                                    "default": false,
+                                    "format": "checkbox"
                                 },
                                 "du": {
-                                    "type": "object",
-                                    "properties": {
-                                        "enabled": {
-                                            "type": "boolean"
-                                        }
-                                    }
+                                    "type": "boolean",
+                                    "default": false,
+                                    "format": "checkbox"
                                 },
                                 "identity": {
-                                    "type": "object",
-                                    "properties": {
-                                        "enabled": {
-                                            "type": "boolean"
-                                        }
-                                    }
+                                    "type": "boolean",
+                                    "default": false,
+                                    "format": "checkbox"
                                 },
                                 "insights": {
-                                    "type": "object",
-                                    "properties": {
-                                        "enabled": {
-                                            "type": "boolean"
-                                        }
-                                    }
+                                    "type": "boolean",
+                                    "default": false,
+                                    "format": "checkbox"
                                 },
                                 "la": {
-                                    "type": "object",
-                                    "properties": {
-                                        "enabled": {
-                                            "type": "boolean"
-                                        }
-                                    }
+                                    "type": "boolean",
+                                    "default": false,
+                                    "format": "checkbox"
                                 },
                                 "location": {
-                                    "type": "object",
-                                    "properties": {
-                                        "enabled": {
-                                            "type": "boolean"
-                                        }
-                                    }
+                                    "type": "boolean",
+                                    "default": false,
+                                    "format": "checkbox"
                                 },
                                 "lrm": {
-                                    "type": "object",
-                                    "properties": {
-                                        "enabled": {
-                                            "type": "boolean"
-                                        }
-                                    }
+                                    "type": "boolean",
+                                    "default": false,
+                                    "format": "checkbox"
                                 },
                                 "oms": {
-                                    "type": "object",
-                                    "properties": {
-                                        "enabled": {
-                                            "type": "boolean"
-                                        }
-                                    }
+                                    "type": "boolean",
+                                    "default": false,
+                                    "format": "checkbox"
                                 },
                                 "orchestrator": {
-                                    "type": "object",
-                                    "properties": {
-                                        "enabled": {
-                                            "type": "boolean"
-                                        }
-                                    }
+                                    "type": "boolean",
+                                    "default": false,
+                                    "format": "checkbox"
                                 },
                                 "portal": {
-                                    "type": "object",
-                                    "properties": {
-                                        "enabled": {
-                                            "type": "boolean"
-                                        }
-                                    }
+                                    "type": "boolean",
+                                    "default": false,
+                                    "format": "checkbox"
                                 },
                                 "processes": {
-                                    "type": "object",
-                                    "properties": {
-                                        "enabled": {
-                                            "type": "boolean"
-                                        }
-                                    }
+                                    "type": "boolean",
+                                    "default": false,
+                                    "format": "checkbox"
                                 },
                                 "sfcore": {
-                                    "type": "object",
-                                    "properties": {
-                                        "enabled": {
-                                            "type": "boolean"
-                                        }
-                                    }
+                                    "type": "boolean",
+                                    "default": false,
+                                    "format": "checkbox"
                                 },
                                 "taskmining": {
-                                    "type": "object",
-                                    "properties": {
-                                        "enabled": {
-                                            "type": "boolean"
-                                        }
-                                    }
+                                    "type": "boolean",
+                                    "default": false,
+                                    "format": "checkbox"
                                 },
                                 "testmanager": {
-                                    "type": "object",
-                                    "properties": {
-                                        "enabled": {
-                                            "type": "boolean"
-                                        }
-                                    }
+                                    "type": "boolean",
+                                    "default": false,
+                                    "format": "checkbox"
                                 },
                                 "webhook": {
-                                    "type": "object",
-                                    "properties": {
-                                        "enabled": {
-                                            "type": "boolean"
-                                        }
-                                    }
+                                    "type": "boolean",
+                                    "default": false,
+                                    "format": "checkbox"
                                 }
                             }
                         },
                         "ha": {
-                            "type": "boolean"
+                            "type": "boolean",
+                            "format": "radio",
+                            "enum": ["Yes", "No"]
                         }
-                    }
-                },
-                "imagePullSecrets": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
                     }
                 },
                 "registryUrl": {
