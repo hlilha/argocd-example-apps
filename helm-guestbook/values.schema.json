@@ -222,13 +222,28 @@
                                     "type": "object",
                                     "properties": {
                                         "ca": {
-                                            "type": "string"
+                                            "type": "string",
+                                            "title": "CA Certificate",
+                                            "media": {
+                                                "binaryEncoding": "base64",
+                                                "type": "application/x-x509-ca-cert"
+                                            }
                                         },
                                         "key": {
-                                            "type": "string"
+                                            "type": "string",
+                                            "tile": "Server Certificate",
+                                            "media": {
+                                                "binaryEncoding": "base64",
+                                                "type": "application/x-x509-ca-cert"
+                                            }
                                         },
                                         "tls": {
-                                            "type": "string"
+                                            "type": "string",
+                                            "title": "Server Certificate Key",
+                                            "media": {
+                                                "binaryEncoding": "base64",
+                                                "type": "application/x-x509-ca-cert"
+                                            }
                                         }
                                     }
                                 },
