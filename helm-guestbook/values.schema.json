@@ -138,19 +138,23 @@
                 "properties": {
                   "aiDeployerDatabaseName": {
                     "type": "string",
-                    "title": "Deployer Database Name"
+                    "title": "Deployer Database Name",
+                    "minLength": 4
                   },
                   "aiHelperDatabaseName": {
                     "type": "string",
-                    "title": "Helper Database Name"
+                    "title": "Helper Database Name",
+                    "minLength": 4
                   },
                   "aiPkgmanagerDatabaseName": {
                     "type": "string",
-                    "title": "PackageManager Database Name"
+                    "title": "PackageManager Database Name",
+                    "minLength": 4
                   },
                   "aiTrainerDatabaseName": {
                     "type": "string",
-                    "title": "Trainer Database Name"
+                    "title": "Trainer Database Name",
+                    "minLength": 4
                   },
                   "host": {
                     "type": "string",
