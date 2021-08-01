@@ -9,7 +9,8 @@
             "type": "object",
             "properties": {
                 "pullPolicy": {
-                    "type": "string"
+                    "type": "string",
+                    "pattern": "^(Always|Never|IfNotPresent)$"
                 },
                 "repository": {
                     "type": "string"
