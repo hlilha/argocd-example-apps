@@ -15,7 +15,7 @@
                     "type": "string"
                 },
                 "tag": {
-                    "type": "integer"
+                    "type": "string"
                 }
             }
         },
