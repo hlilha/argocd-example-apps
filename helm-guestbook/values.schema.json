@@ -1,56 +1,306 @@
 {
-    "$schema": "http://json-schema.org/schema#",
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
     "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "replicaCount": 1,
+            "image": {
+                "repository": "gcr.io/heptio-images/ks-guestbook-demo",
+                "tag": 0.1,
+                "pullPolicy": "IfNotPresent"
+            },
+            "service": {
+                "type": "ClusterIP",
+                "port": 80
+            },
+            "ingress": {
+                "enabled": true,
+                "annotations": {},
+                "path": "/",
+                "hosts": [
+                    "chart-example.local",
+                    "chart-example.internal"
+                ],
+                "tls": []
+            },
+            "resources": {},
+            "nodeSelector": {},
+            "tolerations": [],
+            "affinity": {}
+        }
+    ],
+    "required": [
+        "replicaCount",
+        "image",
+        "service",
+        "ingress",
+        "resources",
+        "nodeSelector",
+        "tolerations",
+        "affinity"
+    ],
     "properties": {
-        "affinity": {
-            "type": "object"
+        "replicaCount": {
+            "$id": "#/properties/replicaCount",
+            "type": "integer",
+            "title": "The replicaCount schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                1
+            ]
         },
         "image": {
+            "$id": "#/properties/image",
             "type": "object",
+            "title": "The image schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "repository": "gcr.io/heptio-images/ks-guestbook-demo",
+                    "tag": 0.1,
+                    "pullPolicy": "IfNotPresent"
+                }
+            ],
+            "required": [
+                "repository",
+                "tag",
+                "pullPolicy"
+            ],
             "properties": {
-                "pullPolicy": {
-                    "type": "string",
-                    "pattern": "^(Always|Never|IfNotPresent)$"
-                },
                 "repository": {
-                    "type": "string"
+                    "$id": "#/properties/image/properties/repository",
+                    "type": "string",
+                    "title": "The repository schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "gcr.io/heptio-images/ks-guestbook-demo"
+                    ]
                 },
                 "tag": {
-                    "type": "string"
-                }
-            }
-        },
-        "ingress": {
-            "type": "object",
-            "properties": {
-                "enabled": {
-                    "type": "boolean",
-                    "format": "checkbox"
+                    "$id": "#/properties/image/properties/tag",
+                    "type": "number",
+                    "title": "The tag schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0.0,
+                    "examples": [
+                        0.1
+                    ]
                 },
-                "hosts": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "path": {
-                    "type": "string"
+                "pullPolicy": {
+                    "$id": "#/properties/image/properties/pullPolicy",
+                    "type": "string",
+                    "title": "The pullPolicy schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "IfNotPresent"
+                    ]
                 }
-            }
-        },
-        "replicaCount": {
-            "type": "integer"
+            },
+            "additionalProperties": true
         },
         "service": {
+            "$id": "#/properties/service",
             "type": "object",
-            "properties": {
-                "port": {
-                    "type": "integer"
-                },
-                "type": {
-                    "type": "string"
+            "title": "The service schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "type": "ClusterIP",
+                    "port": 80
                 }
+            ],
+            "required": [
+                "type",
+                "port"
+            ],
+            "properties": {
+                "type": {
+                    "$id": "#/properties/service/properties/type",
+                    "type": "string",
+                    "title": "The type schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "ClusterIP"
+                    ]
+                },
+                "port": {
+                    "$id": "#/properties/service/properties/port",
+                    "type": "integer",
+                    "title": "The port schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        80
+                    ]
+                }
+            },
+            "additionalProperties": true
+        },
+        "ingress": {
+            "$id": "#/properties/ingress",
+            "type": "object",
+            "title": "The ingress schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "enabled": true,
+                    "annotations": {},
+                    "path": "/",
+                    "hosts": [
+                        "chart-example.local",
+                        "chart-example.internal"
+                    ],
+                    "tls": []
+                }
+            ],
+            "required": [
+                "enabled",
+                "annotations",
+                "path",
+                "hosts",
+                "tls"
+            ],
+            "properties": {
+                "enabled": {
+                    "$id": "#/properties/ingress/properties/enabled",
+                    "type": "boolean",
+                    "title": "The enabled schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": false,
+                    "examples": [
+                        true
+                    ]
+                },
+                "annotations": {
+                    "$id": "#/properties/ingress/properties/annotations",
+                    "type": "object",
+                    "title": "The annotations schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": {},
+                    "examples": [
+                        {}
+                    ],
+                    "required": [],
+                    "additionalProperties": true
+                },
+                "path": {
+                    "$id": "#/properties/ingress/properties/path",
+                    "type": "string",
+                    "title": "The path schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "/"
+                    ]
+                },
+                "hosts": {
+                    "$id": "#/properties/ingress/properties/hosts",
+                    "type": "array",
+                    "title": "The hosts schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": [],
+                    "examples": [
+                        [
+                            "chart-example.local",
+                            "chart-example.internal"
+                        ]
+                    ],
+                    "additionalItems": true,
+                    "items": {
+                        "$id": "#/properties/ingress/properties/hosts/items",
+                        "anyOf": [
+                            {
+                                "$id": "#/properties/ingress/properties/hosts/items/anyOf/0",
+                                "type": "string",
+                                "title": "The first anyOf schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "chart-example.local",
+                                    "chart-example.internal"
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "tls": {
+                    "$id": "#/properties/ingress/properties/tls",
+                    "type": "array",
+                    "title": "The tls schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": [],
+                    "examples": [
+                        []
+                    ],
+                    "additionalItems": true,
+                    "items": {
+                        "$id": "#/properties/ingress/properties/tls/items"
+                    }
+                }
+            },
+            "additionalProperties": true
+        },
+        "resources": {
+            "$id": "#/properties/resources",
+            "type": "object",
+            "title": "The resources schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {}
+            ],
+            "required": [],
+            "additionalProperties": true
+        },
+        "nodeSelector": {
+            "$id": "#/properties/nodeSelector",
+            "type": "object",
+            "title": "The nodeSelector schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {}
+            ],
+            "required": [],
+            "additionalProperties": true
+        },
+        "tolerations": {
+            "$id": "#/properties/tolerations",
+            "type": "array",
+            "title": "The tolerations schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "examples": [
+                []
+            ],
+            "additionalItems": true,
+            "items": {
+                "$id": "#/properties/tolerations/items"
             }
+        },
+        "affinity": {
+            "$id": "#/properties/affinity",
+            "type": "object",
+            "title": "The affinity schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {}
+            ],
+            "required": [],
+            "additionalProperties": true
         }
-    }
+    },
+    "additionalProperties": true
 }
