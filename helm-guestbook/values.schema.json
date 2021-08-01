@@ -301,6 +301,5 @@
             "required": [],
             "additionalProperties": true
         }
-    },
-    "additionalProperties": true
+    }
 }
