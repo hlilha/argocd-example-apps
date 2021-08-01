@@ -23,7 +23,8 @@
             "type": "object",
             "properties": {
                 "enabled": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "format": "checkbox"
                 },
                 "hosts": {
                     "type": "array",
