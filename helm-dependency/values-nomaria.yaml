@@ -4,7 +4,7 @@ mariadb:
 wordpress:
   wordpressPassword: foo
   mariadb:
-    enabled: false
+    enabled: "false"
   externalDatabase:
     host: localhost
     user: bn_wordpress
